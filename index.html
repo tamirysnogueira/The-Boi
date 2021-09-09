@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/script.js"></script>
+    <title>Churras</title>
+</head>
+<body>
+    <section id="imagem">
+        <img src="img/Group 5.png" alt="">
+    </section>
+
+    <section id="info">
+        <div id="apresentação">
+            <h1>Boas vindas ao The Boi</h1>
+        </div>
+
+        <form action="">
+            <div>   
+                <span>Adultos</span>
+                <input type="number" name="" id="adultos" onfocus="this.value=''">
+            </div>
+            
+            <div>
+                <span>Crianças</span>
+                <input type="number" name="" id="crianças" onfocus="this.value=''">
+            </div>
+
+            <div>
+                <span>Duração</span>
+                <input type="number" name="" id="duração" onfocus="this.value=''">
+            </div>
+            
+        </form>
+
+        <div id="calcular">
+            <button type="button" onclick="calcular()">Calcular</button>
+        </div>
+    </section>
+
+    <div id="modal">
+        <div id="conteudo">
+            <button type="button" onclick="fechar()"> <img src="img/cancel.png" alt=""></button>
+            <h1>O total de cada produto é de: </h1>
+
+            <div id="produtos">
+                <div>
+                    <img src="img/peito-de-frango.png" alt="">
+                    <span id="carne"></span>
+                </div>
+
+                <div>
+                    <img src="img/cerveja-preta.png" alt="">
+                    <span id="cerveja"></span>
+                </div>
+
+                <div>
+                    <img src="img/refrigerante.png" alt="">
+                    <span id="refrigerante"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
