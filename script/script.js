@@ -27,14 +27,14 @@ function calcular(){
         crianças = parseInt(crianças)
         
         if(duração > 6){
-            carne = (650 * (adultos + (crianças * 0.5)))/1000
-            cerveja = (2000 * (adultos + (crianças * 0.5)))/330 // 330 ml == 1 lata
-            refrigerante = (1500 * (adultos + (crianças * 0.5)))/350 // 350 ml == 1 lata
+            carne = ((650 * adultos) + (650/2 * crianças))/1000
+            cerveja = (2000 * adultos)/330 // 330 ml == 1 lata
+            refrigerante = ((1500 * adultos) + (1500/2 * crianças))/350 // 350 ml == 1 lata
         }
         if (duração <= 6) {
-            carne = (400 * (adultos + (crianças * 0.5)))/1000
-            cerveja = (1200 * (adultos + (crianças * 0.5)))/330
-            refrigerante = (1000 * (adultos + (crianças * 0.5)))/350
+            carne = (400 * (adultos + (400/2 * crianças)))/1000
+            cerveja = (1200 * adultos)/330
+            refrigerante = (1000 * (adultos + (1000/2 * crianças)))/350
         }
 
         mostrar(carne,cerveja,refrigerante)
@@ -43,8 +43,8 @@ function calcular(){
 
 function mostrar(carne,cerveja,refrigerante){
     document.getElementById('carne').innerHTML = `${carne.toFixed(1)} Kg`
-    document.getElementById('cerveja').innerHTML = `${parseInt(cerveja)} Latas`
-    document.getElementById('refrigerante').innerHTML = `${parseInt(refrigerante)} Latas`
+    document.getElementById('cerveja').innerHTML = `${parseInt(cerveja)} Latas de 330 ml`
+    document.getElementById('refrigerante').innerHTML = `${parseInt(refrigerante)} Latas de 350 ml`
 
 }
 
