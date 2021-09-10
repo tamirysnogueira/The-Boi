@@ -32,9 +32,9 @@ function calcular(){
             refrigerante = ((1500 * adultos) + (1500/2 * crianças))/350 // 350 ml == 1 lata
         }
         if (duração <= 6) {
-            carne = (400 * (adultos + (400/2 * crianças)))/1000
+            carne = ((400 * adultos) + (400/2 * crianças))/1000
             cerveja = (1200 * adultos)/330
-            refrigerante = (1000 * (adultos + (1000/2 * crianças)))/350
+            refrigerante = ((1000 * adultos) + (1000/2 * crianças))/350
         }
 
         mostrar(carne,cerveja,refrigerante)
